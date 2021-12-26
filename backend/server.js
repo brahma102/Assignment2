@@ -6,6 +6,7 @@ var cors = require('cors');
 var multer = require('multer'),
   bodyParser = require('body-parser'),
   path = require('path');
+
 var mongoose = require("mongoose");
 mongoose.connect('mongodb+srv://brahma11:admin@cluster0.mptum.mongodb.net/mydatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (!err) {
@@ -14,6 +15,8 @@ mongoose.connect('mongodb+srv://brahma11:admin@cluster0.mptum.mongodb.net/mydata
         console.log('Connection failed' + JSON.stringify(err, undefined, 2));
     }
 });
+
+
 var fs = require('fs');
 var product = require("./model/product.js");
 var user = require("./model/user.js");
